@@ -1320,9 +1320,9 @@
     const layer = $("#celebrate");
     layer.hidden = false;
     layer.innerHTML = `
-      <div class="cele" role="dialog" aria-modal="true" aria-labelledby="celeTitle">
+      <div class="cele${doneN === slides().length ? " is-final" : ""}" role="dialog" aria-modal="true" aria-labelledby="celeTitle">
         <div class="cele-jump" aria-hidden="true"><img class="cele-blr" src="assets/blr/wave.png" alt=""><span class="cele-shadow"></span></div>
-        <p class="ms-gain">${doneN === slides().length ? `${ico("flag")}Congratulations! You've explored Assemblr EDU` : `${ico(FEATURE_ICON[s.feature] || "cube")}You tried ${esc(featureLabel(s.feature))}`}</p>
+        <p class="ms-gain">${doneN === slides().length ? `${ico("flag")}Congratulations!` : `${ico(FEATURE_ICON[s.feature] || "cube")}You tried ${esc(featureLabel(s.feature))}`}</p>
         <h3 id="celeTitle">${esc(title)}</h3>
         <p class="cele-body">${esc(fn(ctx()))}</p>
         <div class="cele-prog"><div class="pbar"><span style="width:${(doneN / slides().length) * 100}%"></span></div><p><span>Mission ${i + 1} complete</span><b>${doneN} of ${slides().length}</b></p></div>
