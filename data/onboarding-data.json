@@ -1,0 +1,1955 @@
+[
+  {
+    "id": "student",
+    "role": "Student",
+    "motivations": [
+      {
+        "motivation": "Make a project for class",
+        "followUp": null,
+        "draft": false,
+        "owner": true,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your assignment in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The user can interact with a 3D object, and view it in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create an interactive 3D game",
+            "check": null,
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The user can play a simple game, and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Create a project with your classmates",
+            "check": null,
+            "message": "Use Collaborate to build projects with your classmates in real time.",
+            "feature": "Collaborate",
+            "flow": [
+              "Create project",
+              "Share the Collaborate link",
+              "Another user joins"
+            ],
+            "jtbd": "The student can add a friend, and then more friends. Each friend can make a project, publish it, and share it."
+          }
+        ]
+      },
+      {
+        "motivation": "Make a project for an exam or assessment",
+        "followUp": "Who is organizing this?",
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a 3D/AR project for your assessment",
+            "check": null,
+            "message": "Build your assessment in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The student can build an assessment project with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create an interactive 3D game",
+            "check": null,
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The student can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Create a project with your classmates",
+            "check": null,
+            "message": "Use Collaborate to build projects with your classmates in real time.",
+            "feature": "Collaborate",
+            "flow": [
+              "Create project",
+              "Share the Collaborate link",
+              "Another user joins"
+            ],
+            "jtbd": "The student can add a classmate, and then more classmates. Each one can make a project, publish it, and share it."
+          }
+        ]
+      },
+      {
+        "motivation": "Make a project for a competition or exhibition",
+        "followUp": "What is the event called?",
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a 3D/AR project that stands out",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The student can build a competition or exhibition entry with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create an interactive 3D game",
+            "check": null,
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The student can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Create a project with your classmates",
+            "check": null,
+            "message": "Use Collaborate to build projects with your classmates in real time.",
+            "feature": "Collaborate",
+            "flow": [
+              "Create project",
+              "Share the Collaborate link",
+              "Another user joins"
+            ],
+            "jtbd": "The student can add a classmate, and then more classmates. Each one can make a project, publish it, and share it."
+          }
+        ]
+      },
+      {
+        "motivation": "Learn to create with 3D and AR",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create your first 3D/AR project",
+            "check": null,
+            "message": "Build your first project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The student can build a first 3D/AR project with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create an interactive 3D game",
+            "check": null,
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The student can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Create a project with your classmates",
+            "check": null,
+            "message": "Use Collaborate to build projects with your classmates in real time.",
+            "feature": "Collaborate",
+            "flow": [
+              "Create project",
+              "Share the Collaborate link",
+              "Another user joins"
+            ],
+            "jtbd": "The student can add a classmate, and then more classmates. Each one can make a project, publish it, and share it."
+          }
+        ]
+      },
+      {
+        "motivation": "I just want to explore",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create your first 3D/AR project",
+            "check": null,
+            "message": "Explore ready-to-use 3D/AR in Edu Kits, then view it in AR.",
+            "feature": "Edu Kits",
+            "flow": [
+              "Open Edu Kits",
+              "Pick a subject and grade",
+              "Open a project",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The student can open a ready-to-use 3D/AR project about any topic they're curious about, explore it in 3D and AR, with no setup."
+          },
+          {
+            "title": "Create an interactive 3D game",
+            "check": null,
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The student can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Create a project with your classmates",
+            "check": null,
+            "message": "Use Collaborate to build projects with your classmates in real time.",
+            "feature": "Collaborate",
+            "flow": [
+              "Create project",
+              "Share the Collaborate link",
+              "Another user joins"
+            ],
+            "jtbd": "The student can add a classmate, and then more classmates. Each one can make a project, publish it, and share it."
+          }
+        ]
+      },
+      {
+        "motivation": "Something else",
+        "followUp": "What's your motivation?",
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The student can build a project with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create an interactive 3D game",
+            "check": null,
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The student can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Create a project with your classmates",
+            "check": null,
+            "message": "Use Collaborate to build projects with your classmates in real time.",
+            "feature": "Collaborate",
+            "flow": [
+              "Create project",
+              "Share the Collaborate link",
+              "Another user joins"
+            ],
+            "jtbd": "The student can add a classmate, and then more classmates. Each one can make a project, publish it, and share it."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "educator",
+    "role": "Educator",
+    "motivations": [
+      {
+        "motivation": "Use ready-to-use materials for my lessons",
+        "followUp": null,
+        "draft": true,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Use ready-to-use lessons in Topic",
+            "check": null,
+            "message": "Open learning slides with 3D for your subject, ready to present.",
+            "feature": "Topic",
+            "flow": [
+              "Open Topic",
+              "Pick a subject and grade",
+              "Open learning slides",
+              "The teacher presents the learning slides"
+            ],
+            "jtbd": "The teacher can open ready-to-use learning slides with 3D for their subject and present them right away, with no preparation."
+          },
+          {
+            "title": "Bring ready-to-use 3D/AR from Edu Kits",
+            "check": null,
+            "message": "Open a project for your subject in Edu Kits and use it in class.",
+            "feature": "Edu Kits",
+            "flow": [
+              "Open Edu Kits",
+              "Pick a subject and grade",
+              "Open a project",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The teacher can open a ready-to-use 3D/AR project about their subject, explore it in 3D and AR, with no setup."
+          },
+          {
+            "title": "Share assignments and materials in Class",
+            "check": null,
+            "message": "Invite students, give assignments, and see their projects in one place.",
+            "feature": "Class",
+            "flow": [
+              "Create a Class and add materials",
+              "Invite students with the class code",
+              "Give an assignment",
+              "See every student's project"
+            ],
+            "jtbd": "The teacher can invite students, give assignments or materials, and see every student's project in one place."
+          }
+        ]
+      },
+      {
+        "motivation": "Create a project for my students",
+        "followUp": null,
+        "draft": true,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a 3D/AR project from your idea",
+            "check": null,
+            "message": "Build your lesson in the Editor with ready-to-use 3D objects, so students see what they're learning.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The teacher can build a lesson with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Present your project in 3D/AR",
+            "check": null,
+            "message": "Show it on screen, or share a link so students can rotate the 3D and view it in AR on their phones.",
+            "feature": "Publish and share (3D/AR viewer)",
+            "flow": [
+              "Publish the project",
+              "Show it on screen, or share the link",
+              "Students open the link on their phones",
+              "View it in AR"
+            ],
+            "jtbd": "The teacher can show a lesson on screen or share a link, so students can rotate the 3D and view it in AR on their own phones."
+          },
+          {
+            "title": "Share assignments and materials in Class",
+            "check": null,
+            "message": "Invite students, give assignments, and see their projects in one place.",
+            "feature": "Class",
+            "flow": [
+              "Create a Class and add materials",
+              "Invite students with the class code",
+              "Give an assignment",
+              "See every student's project"
+            ],
+            "jtbd": "The teacher can invite students, give assignments or materials, and see every student's project in one place."
+          }
+        ]
+      },
+      {
+        "motivation": "Create a project for an exam, assessment, or qualification",
+        "followUp": "Who is organizing this?",
+        "draft": true,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in the Editor with ready-to-use 3D objects.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The teacher can build an assessment project with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Present your project in 3D/AR",
+            "check": null,
+            "message": "Share a link so assessors can rotate the 3D and view it in AR.",
+            "feature": "Publish and share (3D/AR viewer)",
+            "flow": [
+              "Publish the project",
+              "Show it on screen, or share the link",
+              "Assessors open the link on their phones",
+              "View it in AR"
+            ],
+            "jtbd": "The teacher can show an assessment project on screen or share a link, so assessors can rotate the 3D and view it in AR on their own phones."
+          },
+          {
+            "title": "Share assignments and materials in Class",
+            "check": null,
+            "message": "Invite students, give assignments, and see their projects in one place.",
+            "feature": "Class",
+            "flow": [
+              "Create a Class and add materials",
+              "Invite students with the class code",
+              "Give an assignment",
+              "See every student's project"
+            ],
+            "jtbd": "The teacher can invite students, give assignments or materials, and see every student's project in one place."
+          }
+        ]
+      },
+      {
+        "motivation": "Introduce AR/Immersive tech to my students",
+        "followUp": null,
+        "draft": true,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Start with ready-to-use 3D/AR",
+            "check": null,
+            "message": "Pick a project for your subject from Edu Kits. No setup needed.",
+            "feature": "Edu Kits",
+            "flow": [
+              "Open Edu Kits",
+              "Pick a subject and grade",
+              "Open a project",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The teacher can open a ready-to-use 3D/AR project about their subject, explore it in 3D and AR, with no setup."
+          },
+          {
+            "title": "Bring 3D/AR into your class",
+            "check": null,
+            "message": "Show it on screen, or share a link so students can rotate the 3D and view it in AR on their phones.",
+            "feature": "Publish and share (3D/AR viewer)",
+            "flow": [
+              "Publish the project",
+              "Show it on screen, or share the link",
+              "Students open the link on their phones",
+              "View it in AR"
+            ],
+            "jtbd": "The teacher can show a lesson on screen or share a link, so students can rotate the 3D and view it in AR on their own phones."
+          },
+          {
+            "title": "Share assignments and materials in Class",
+            "check": null,
+            "message": "Invite students, give assignments, and see their projects in one place.",
+            "feature": "Class",
+            "flow": [
+              "Create a Class and add materials",
+              "Invite students with the class code",
+              "Give an assignment",
+              "See every student's project"
+            ],
+            "jtbd": "The teacher can invite students, give assignments or materials, and see every student's project in one place."
+          }
+        ]
+      },
+      {
+        "motivation": "Improve my digital teaching skills",
+        "followUp": null,
+        "draft": true,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create your first 3D/AR project",
+            "check": null,
+            "message": "Build one of your lessons in 3D and learn the Editor as you go.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The teacher can build one of their lessons with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Present your project in 3D/AR",
+            "check": null,
+            "message": "Show it on screen, or share a link so students can rotate the 3D and view it in AR on their phones.",
+            "feature": "Publish and share (3D/AR viewer)",
+            "flow": [
+              "Publish the project",
+              "Show it on screen, or share the link",
+              "Students open the link on their phones",
+              "View it in AR"
+            ],
+            "jtbd": "The teacher can show one of their lessons on screen or share a link, so students can rotate the 3D and view it in AR on their own phones."
+          },
+          {
+            "title": "Share assignments and materials in Class",
+            "check": null,
+            "message": "Invite students, give assignments, and see their projects in one place.",
+            "feature": "Class",
+            "flow": [
+              "Create a Class and add materials",
+              "Invite students with the class code",
+              "Give an assignment",
+              "See every student's project"
+            ],
+            "jtbd": "The teacher can invite students, give assignments or materials, and see every student's project in one place."
+          }
+        ]
+      },
+      {
+        "motivation": "Other",
+        "followUp": "What's your motivation?",
+        "draft": true,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a 3D/AR project for your class",
+            "check": null,
+            "message": "Build your lesson in the Editor with ready-to-use 3D objects, for the subject you teach.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The teacher can build a lesson for the subject they teach with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Present your project in 3D/AR",
+            "check": null,
+            "message": "Show it on screen, or share a link so students can rotate the 3D and view it in AR on their phones.",
+            "feature": "Publish and share (3D/AR viewer)",
+            "flow": [
+              "Publish the project",
+              "Show it on screen, or share the link",
+              "Students open the link on their phones",
+              "View it in AR"
+            ],
+            "jtbd": "The teacher can show a lesson for the subject they teach on screen or share a link, so students can rotate the 3D and view it in AR on their own phones."
+          },
+          {
+            "title": "Share assignments and materials in Class",
+            "check": null,
+            "message": "Invite students, give assignments, and see their projects in one place.",
+            "feature": "Class",
+            "flow": [
+              "Create a Class and add materials",
+              "Invite students with the class code",
+              "Give an assignment",
+              "See every student's project"
+            ],
+            "jtbd": "The teacher can invite students, give assignments or materials, and see every student's project in one place."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "parent",
+    "role": "Parent",
+    "motivations": [
+      {
+        "motivation": "Help my child with school assignments",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a 3D/AR project with your child",
+            "check": null,
+            "message": "Build your child's assignment in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The parent and child can build the child's school assignment with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create an interactive 3D game together",
+            "check": null,
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The parent and child can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Try AI-3D Generation: change an image into 3D",
+            "check": null,
+            "message": "Use AI-3D Generation to turn image/text into 3D.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The parent and child can turn an image or text into a 3D object, use it in the child's school assignment, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Help my child understand difficult concepts",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Explore hard topics in 3D with your child",
+            "check": null,
+            "message": "Explore ready-to-use 3D/AR in Edu Kits, like the solar system, a cell, or a volcano.",
+            "feature": "Edu Kits",
+            "flow": [
+              "Open Edu Kits",
+              "Pick a subject and grade",
+              "Open a project",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The parent and child can open a ready-to-use 3D/AR project about hard topics like the solar system, a cell, or a volcano, explore it in 3D and AR, with no setup."
+          },
+          {
+            "title": "Create an interactive 3D game together",
+            "check": null,
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The parent and child can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Try AI-3D Generation: change an image into 3D",
+            "check": null,
+            "message": "Use AI-3D Generation to turn your child's drawing into 3D.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The parent and child can turn the child's drawing into a 3D object, use it in a project about a hard topic, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Make learning more fun and engaging for my child",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Make learning feel like play",
+            "check": null,
+            "message": "Drag in 3D objects together in the Editor, then see them in your room with AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The parent and child can build a playful 3D scene with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create an interactive 3D game together",
+            "check": null,
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The parent and child can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Try AI-3D Generation: change an image into 3D",
+            "check": null,
+            "message": "Use AI-3D Generation to turn your child's drawing into 3D.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The parent and child can turn the child's drawing into a 3D object, use it in a playful 3D scene, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Help my child develop creative and digital skills",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create your child's first 3D/AR project",
+            "check": null,
+            "message": "Your child builds their first project in the Editor. You cheer them on.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The parent and child can build the child's first project with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create an interactive 3D game together",
+            "check": null,
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The parent and child can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Try AI-3D Generation: change an image into 3D",
+            "check": null,
+            "message": "Use AI-3D Generation to turn your child's drawing into 3D.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The parent and child can turn the child's drawing into a 3D object, use it in the child's first project, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Introduce my child to interactive 3D and AR",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create your first 3D/AR project with your child",
+            "check": null,
+            "message": "Build your first project together in the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The parent and child can build their first project together with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create an interactive 3D game together",
+            "check": null,
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The parent and child can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Try AI-3D Generation: change an image into 3D",
+            "check": null,
+            "message": "Use AI-3D Generation to turn your child's drawing into 3D.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The parent and child can turn the child's drawing into a 3D object, use it in their first project together, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Other",
+        "followUp": "What's your motivation?",
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a 3D/AR project with your child",
+            "check": null,
+            "message": "Build a project together in the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The parent and child can build a project together with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create an interactive 3D game together",
+            "check": null,
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The parent and child can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Try AI-3D Generation: change an image into 3D",
+            "check": null,
+            "message": "Use AI-3D Generation to turn your child's drawing into 3D.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The parent and child can turn the child's drawing into a 3D object, use it in a project together, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "university",
+    "role": "University student",
+    "motivations": [
+      {
+        "motivation": "Make a project for class",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project with Custom Marker",
+            "check": null,
+            "message": "Build your assignment with the Editor, then view it on a Custom Marker.",
+            "feature": "Editor + Custom Marker",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker"
+            ],
+            "jtbd": "The university student can build a class assignment in the Editor, then scan a Custom Marker and see it in AR on their own device, smoothly."
+          },
+          {
+            "title": "Create an interactive 3D project",
+            "check": null,
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The university student can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D objects, with or without animation, in minutes",
+            "check": null,
+            "message": "Use AI-3D Generation to change an image or text into 3D, with or without animation.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The university student can turn an image or text into a 3D object, with or without animation, use it in a class assignment, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Create a project for my thesis or research",
+        "followUp": "What kind of research is this?",
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project with Custom Marker",
+            "check": null,
+            "message": "Build your research with the Editor, then view it on a Custom Marker.",
+            "feature": "Editor + Custom Marker",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker"
+            ],
+            "jtbd": "The university student can build a thesis or research project in the Editor, then scan a Custom Marker and see it in AR on their own device, smoothly."
+          },
+          {
+            "title": "Create a project with your classmates",
+            "check": "Title says classmates, message is Visual Coding. Check.",
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The university student can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D objects, with or without animation, in minutes",
+            "check": null,
+            "message": "Use AI-3D Generation to change an image or text into 3D, with or without animation.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The university student can turn an image or text into a 3D object, with or without animation, use it in a thesis or research project, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Make a project for an exam or assessment",
+        "followUp": "Who is organizing this?",
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project with Custom Marker",
+            "check": null,
+            "message": "Build your assessment with the Editor, then view it on a Custom Marker.",
+            "feature": "Editor + Custom Marker",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker"
+            ],
+            "jtbd": "The university student can build an assessment project in the Editor, then scan a Custom Marker and see it in AR on their own device, smoothly."
+          },
+          {
+            "title": "Create a project with your classmates",
+            "check": "Title says classmates, message is Visual Coding. Check.",
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The university student can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D objects, with or without animation, in minutes",
+            "check": null,
+            "message": "Use AI-3D Generation to change an image or text into 3D, with or without animation.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The university student can turn an image or text into a 3D object, with or without animation, use it in an assessment project, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Make a project for a competition or exhibition",
+        "followUp": "What is the event called?",
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project with Custom Marker",
+            "check": null,
+            "message": "Build your competition entry with the Editor, then view it on a Custom Marker.",
+            "feature": "Editor + Custom Marker",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker"
+            ],
+            "jtbd": "The university student can build a competition entry in the Editor, then scan a Custom Marker and see it in AR on their own device, smoothly."
+          },
+          {
+            "title": "Create a project with your classmates",
+            "check": "Title says classmates, message is Visual Coding. Check.",
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The university student can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D objects, with or without animation, in minutes",
+            "check": null,
+            "message": "Use AI-3D Generation to change an image or text into 3D, with or without animation.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The university student can turn an image or text into a 3D object, with or without animation, use it in a competition entry, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Learn to create with 3D and AR",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project with Custom Marker",
+            "check": null,
+            "message": "Build your first project with the Editor, then view it on a Custom Marker.",
+            "feature": "Editor + Custom Marker",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker"
+            ],
+            "jtbd": "The university student can build a first project in the Editor, then scan a Custom Marker and see it in AR on their own device, smoothly."
+          },
+          {
+            "title": "Create a project with your classmates",
+            "check": "Title says classmates, message is Visual Coding. Check.",
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The university student can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D objects, with or without animation, in minutes",
+            "check": null,
+            "message": "Use AI-3D Generation to change an image or text into 3D, with or without animation.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The university student can turn an image or text into a 3D object, with or without animation, use it in a first project, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Something else",
+        "followUp": "What's your motivation?",
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project with Custom Marker",
+            "check": null,
+            "message": "Build your project with the Editor, then view it on a Custom Marker.",
+            "feature": "Editor + Custom Marker",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker"
+            ],
+            "jtbd": "The university student can build a project in the Editor, then scan a Custom Marker and see it in AR on their own device, smoothly."
+          },
+          {
+            "title": "Create a project with your classmates",
+            "check": "Title says classmates, message is Visual Coding. Check.",
+            "message": "Use Visual Coding to make objects move, react, and score.",
+            "feature": "Visual Coding",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Pick a Visual Coding template",
+              "Publish",
+              "Share",
+              "View in 3D"
+            ],
+            "jtbd": "The university student can make a simple game where objects move, react, and score, then play it and view it in 3D on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D objects, with or without animation, in minutes",
+            "check": null,
+            "message": "Use AI-3D Generation to change an image or text into 3D, with or without animation.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The university student can turn an image or text into a 3D object, with or without animation, use it in a project, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lecturer",
+    "role": "Lecturer",
+    "motivations": [
+      {
+        "motivation": "Create a project for my research",
+        "followUp": "What kind of research is this?",
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The lecturer can build a research project with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D/AR for physical products",
+            "check": null,
+            "message": "Use Custom Marker to show 3D/AR on a book, clothes, or a backdrop.",
+            "feature": "Custom Marker",
+            "flow": [
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker or the physical product"
+            ],
+            "jtbd": "The lecturer can attach 3D/AR to a physical product, like a book, clothes, or a backdrop, so anyone who scans it sees the 3D/AR, smoothly."
+          },
+          {
+            "title": "Try AI-3D Generation",
+            "check": null,
+            "message": "Use AI-3D Generation to turn an image or text into 3D or animated 3D.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The lecturer can turn an image or text into a 3D object or animated 3D, use it in a research project, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Train educators",
+        "followUp": "Personal event or institutional?",
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The lecturer can build training material for educators with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D/AR for physical products",
+            "check": null,
+            "message": "Use Custom Marker to show 3D/AR on a book, clothes, or a backdrop.",
+            "feature": "Custom Marker",
+            "flow": [
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker or the physical product"
+            ],
+            "jtbd": "The lecturer can attach 3D/AR to a physical product, like a book, clothes, or a backdrop, so anyone who scans it sees the 3D/AR, smoothly."
+          },
+          {
+            "title": "Try AI-3D Generation",
+            "check": null,
+            "message": "Use AI-3D Generation to turn an image or text into 3D or animated 3D.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The lecturer can turn an image or text into a 3D object or animated 3D, use it in training material for educators, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Introduce AR/Immersive tech to my university students",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The lecturer can build a demo for university students with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D/AR for physical products",
+            "check": null,
+            "message": "Use Custom Marker to show 3D/AR on a book, clothes, or a backdrop.",
+            "feature": "Custom Marker",
+            "flow": [
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker or the physical product"
+            ],
+            "jtbd": "The lecturer can attach 3D/AR to a physical product, like a book, clothes, or a backdrop, so anyone who scans it sees the 3D/AR, smoothly."
+          },
+          {
+            "title": "Try AI-3D Generation",
+            "check": null,
+            "message": "Use AI-3D Generation to turn an image or text into 3D or animated 3D.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The lecturer can turn an image or text into a 3D object or animated 3D, use it in a demo for university students, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Develop learning programs",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The lecturer can build a learning program with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D/AR for physical products",
+            "check": null,
+            "message": "Use Custom Marker to show 3D/AR on a book, clothes, or a backdrop.",
+            "feature": "Custom Marker",
+            "flow": [
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker or the physical product"
+            ],
+            "jtbd": "The lecturer can attach 3D/AR to a physical product, like a book, clothes, or a backdrop, so anyone who scans it sees the 3D/AR, smoothly."
+          },
+          {
+            "title": "Try AI-3D Generation",
+            "check": null,
+            "message": "Use AI-3D Generation to turn an image or text into 3D or animated 3D.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The lecturer can turn an image or text into a 3D object or animated 3D, use it in a learning program, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Explore AR and see what I can create",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The lecturer can build a first project with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D/AR for physical products",
+            "check": null,
+            "message": "Use Custom Marker to show 3D/AR on a book, clothes, or a backdrop.",
+            "feature": "Custom Marker",
+            "flow": [
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker or the physical product"
+            ],
+            "jtbd": "The lecturer can attach 3D/AR to a physical product, like a book, clothes, or a backdrop, so anyone who scans it sees the 3D/AR, smoothly."
+          },
+          {
+            "title": "Try AI-3D Generation",
+            "check": null,
+            "message": "Use AI-3D Generation to turn an image or text into 3D or animated 3D.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The lecturer can turn an image or text into a 3D object or animated 3D, use it in a first project, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Other",
+        "followUp": "What's your motivation?",
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The lecturer can build a project with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D/AR for physical products",
+            "check": null,
+            "message": "Use Custom Marker to show 3D/AR on a book, clothes, or a backdrop.",
+            "feature": "Custom Marker",
+            "flow": [
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker or the physical product"
+            ],
+            "jtbd": "The lecturer can attach 3D/AR to a physical product, like a book, clothes, or a backdrop, so anyone who scans it sees the 3D/AR, smoothly."
+          },
+          {
+            "title": "Try AI-3D Generation",
+            "check": null,
+            "message": "Use AI-3D Generation to turn an image or text into 3D or animated 3D.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The lecturer can turn an image or text into a 3D object or animated 3D, use it in a project, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "other",
+    "role": "Other",
+    "motivations": [
+      {
+        "motivation": "Create an AR experience",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The user can build an AR experience with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D/AR for physical products",
+            "check": null,
+            "message": "Use Custom Marker to show 3D/AR on a book, clothes, or a backdrop.",
+            "feature": "Custom Marker",
+            "flow": [
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker or the physical product"
+            ],
+            "jtbd": "The user can attach 3D/AR to a physical product, like a book, clothes, or a backdrop, so anyone who scans it sees the 3D/AR, smoothly."
+          },
+          {
+            "title": "Create your own 3D objects with animation",
+            "check": null,
+            "message": "Use AI-3D Generation to change an image or text into 3D with animation.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The user can turn an image or text into a 3D object with animation, use it in an AR experience, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Create educational content",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The user can build educational content with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D/AR for physical products",
+            "check": null,
+            "message": "Use Custom Marker to show 3D/AR on a book, clothes, or a backdrop.",
+            "feature": "Custom Marker",
+            "flow": [
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker or the physical product"
+            ],
+            "jtbd": "The user can attach 3D/AR to a physical product, like a book, clothes, or a backdrop, so anyone who scans it sees the 3D/AR, smoothly."
+          },
+          {
+            "title": "Create your own 3D objects with animation",
+            "check": null,
+            "message": "Use AI-3D Generation to change an image or text into 3D with animation.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The user can turn an image or text into a 3D object with animation, use it in educational content, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Professional project",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The user can build a professional project with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D/AR for physical products",
+            "check": null,
+            "message": "Use Custom Marker to show 3D/AR on a book, clothes, or a backdrop.",
+            "feature": "Custom Marker",
+            "flow": [
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker or the physical product"
+            ],
+            "jtbd": "The user can attach 3D/AR to a physical product, like a book, clothes, or a backdrop, so anyone who scans it sees the 3D/AR, smoothly."
+          },
+          {
+            "title": "Create your own 3D objects with animation",
+            "check": null,
+            "message": "Use AI-3D Generation to change an image or text into 3D with animation.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The user can turn an image or text into a 3D object with animation, use it in a professional project, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Community or organization",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The user can build a project for the community or organization with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D/AR for physical products",
+            "check": null,
+            "message": "Use Custom Marker to show 3D/AR on a book, clothes, or a backdrop.",
+            "feature": "Custom Marker",
+            "flow": [
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker or the physical product"
+            ],
+            "jtbd": "The user can attach 3D/AR to a physical product, like a book, clothes, or a backdrop, so anyone who scans it sees the 3D/AR, smoothly."
+          },
+          {
+            "title": "Create your own 3D objects with animation",
+            "check": null,
+            "message": "Use AI-3D Generation to change an image or text into 3D with animation.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The user can turn an image or text into a 3D object with animation, use it in a project for the community or organization, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Learning or exploration",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The user can build a first project with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D/AR for physical products",
+            "check": null,
+            "message": "Use Custom Marker to show 3D/AR on a book, clothes, or a backdrop.",
+            "feature": "Custom Marker",
+            "flow": [
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker or the physical product"
+            ],
+            "jtbd": "The user can attach 3D/AR to a physical product, like a book, clothes, or a backdrop, so anyone who scans it sees the 3D/AR, smoothly."
+          },
+          {
+            "title": "Create your own 3D objects with animation",
+            "check": null,
+            "message": "Use AI-3D Generation to change an image or text into 3D with animation.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The user can turn an image or text into a 3D object with animation, use it in a first project, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Personal project",
+        "followUp": null,
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The user can build a personal project with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D/AR for physical products",
+            "check": null,
+            "message": "Use Custom Marker to show 3D/AR on a book, clothes, or a backdrop.",
+            "feature": "Custom Marker",
+            "flow": [
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker or the physical product"
+            ],
+            "jtbd": "The user can attach 3D/AR to a physical product, like a book, clothes, or a backdrop, so anyone who scans it sees the 3D/AR, smoothly."
+          },
+          {
+            "title": "Create your own 3D objects with animation",
+            "check": null,
+            "message": "Use AI-3D Generation to change an image or text into 3D with animation.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The user can turn an image or text into a 3D object with animation, use it in a personal project, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      },
+      {
+        "motivation": "Other",
+        "followUp": "What's your motivation?",
+        "draft": false,
+        "owner": false,
+        "slides": [
+          {
+            "title": "Create a simple 3D/AR project",
+            "check": null,
+            "message": "Build your project in 3D with the Editor, then view it in AR.",
+            "feature": "Editor",
+            "flow": [
+              "Create project",
+              "3D library",
+              "Drop 3D object",
+              "Add garnish",
+              "Publish",
+              "Share",
+              "View in 3D and AR"
+            ],
+            "jtbd": "The user can build a project with 3D objects, interact with them, and view them in 3D and AR on their own device, smoothly."
+          },
+          {
+            "title": "Create 3D/AR for physical products",
+            "check": null,
+            "message": "Use Custom Marker to show 3D/AR on a book, clothes, or a backdrop.",
+            "feature": "Custom Marker",
+            "flow": [
+              "Upload a Custom Marker photo",
+              "Publish",
+              "Scan the Custom Marker",
+              "View AR on top of the Custom Marker or the physical product"
+            ],
+            "jtbd": "The user can attach 3D/AR to a physical product, like a book, clothes, or a backdrop, so anyone who scans it sees the 3D/AR, smoothly."
+          },
+          {
+            "title": "Create your own 3D objects with animation",
+            "check": null,
+            "message": "Use AI-3D Generation to change an image or text into 3D with animation.",
+            "feature": "AI-3D Generation",
+            "flow": [
+              "Upload an image or type a text",
+              "Generate 3D",
+              "Add it to the project",
+              "Publish the project",
+              "Share the project"
+            ],
+            "jtbd": "The user can turn an image or text into a 3D object with animation, use it in a project, and view it in 3D and AR, with no modeling skills."
+          }
+        ]
+      }
+    ]
+  }
+]

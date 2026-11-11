@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Onboarding journey · Assemblr EDU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body data-view="landing">
+  <!-- Default page: one button -->
+  <section class="landing" id="landing" aria-labelledby="landingTitle">
+    <div class="sky" aria-hidden="true">
+      <img class="cloud c1" src="assets/world/soft-cloud-a.png" alt="">
+      <img class="cloud c2" src="assets/world/soft-cloud-b.png" alt="">
+      <img class="balloon" src="assets/world/balloon.png" alt="">
+      <img class="kite" src="assets/world/kite.png" alt="">
+      <img class="plane" src="assets/world/plane.png" alt="">
+    </div>
+    <div class="landing-in">
+      <div class="logo-wordmark"><img src="assets/assemblr-mark.png" alt=""><span><i>ASSEMBLR</i> <b class="e">E</b><b class="d">D</b><b class="u">U</b></span></div>
+      <h1 id="landingTitle">Onboarding journey</h1>
+      <p>Choose a role, a reason for joining, and a welcoming message. Then walk through the onboarding they'd see.</p>
+    </div>
+  </section>
+
+  <!-- Welcome carousel, picking up where setup moment ends -->
+  <section class="welcome" id="welcome" aria-roledescription="carousel" aria-labelledby="welcomeTitle" hidden>
+    <div class="sky" aria-hidden="true">
+      <img class="cloud c1" src="assets/world/soft-cloud-a.png" alt="">
+      <img class="cloud c2" src="assets/world/soft-cloud-b.png" alt="">
+      <img class="balloon" src="assets/world/balloon.png" alt="">
+      <img class="kite" src="assets/world/kite.png" alt="">
+      <img class="plane" src="assets/world/plane.png" alt="">
+    </div>
+    <div class="welcome-view" id="welcomeView">
+      <h2 id="welcomeTitle"></h2>
+      <p id="welcomeDesc"></p>
+      <img class="welcome-art" id="welcomeArt" alt="">
+    </div>
+    <div class="welcome-dots" id="welcomeDots" role="tablist" aria-label="Slides"></div>
+    <button class="btn btn-primary welcome-cta" id="welcomeCta" hidden>Let's start Assemblr EDU</button>
+  </section>
+
+  <!-- Product: home + workspace -->
+  <div class="app" id="app" hidden>
+    <aside class="side" id="side"></aside>
+    <main class="ws" id="ws"></main>
+  </div>
+
+  <main class="docview" id="flow" hidden></main>
+  <main class="docview" id="board" hidden></main>
+
+  <!-- Onboarding layers -->
+  <div class="spot" id="spot" hidden></div>
+  <div class="blockers" id="blockers"><i></i><i></i><i></i><i></i></div>
+  <span class="beacon" id="beacon" hidden></span>
+  <div class="coach" id="coach" role="dialog" aria-live="polite" hidden></div>
+  <div class="tour-bar" id="tourBar" hidden></div>
+  <button class="launcher" id="launcher" aria-expanded="false" hidden></button>
+  <div class="ob-pop" id="obPopWrap" hidden></div>
+  <div class="celebrate" id="celebrate" hidden></div>
+
+  <!-- The one demo control -->
+  <button class="demo-btn" id="demoBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="panel"></button>
+  <div class="panel" id="panel" hidden>
+    <div class="panel-scrim"></div>
+    <div class="panel-sheet" role="dialog" aria-modal="true" aria-labelledby="panelTitle">
+      <div class="panel-head">
+        <div style="flex:1"><h2 id="panelTitle">Demo journey</h2><p>Pick who's joining and why. Everything after follows from it.</p></div>
+        <button class="icon-btn sm panel-close" aria-label="Close"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      </div>
+      <div id="panelBody"></div>
+      <div class="panel-foot">
+        <button class="btn btn-ghost" id="panelReset">Reset progress</button>
+        <button class="btn btn-primary" id="panelApply">Start journey</button>
+      </div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js?v=1"></script>
+  <script src="copy.js?v=1"></script>
+  <script src="app.js?v=1"></script>
+  <script src="live-reload.js"></script>
+</body>
+</html>
