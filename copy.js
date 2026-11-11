@@ -33,12 +33,12 @@
   };
 
   const CHECKLIST_TITLE = {
-    student: "Your first steps",
+    student: "Explore quick tour",
     educator: "Get your class ready",
     parent: "Your first steps together",
-    university: "Your first steps",
-    lecturer: "Your first steps",
-    other: "Your first steps"
+    university: "Explore quick tour",
+    lecturer: "Explore quick tour",
+    other: "Explore quick tour"
   };
 
   /* Checklist jobs. They describe what the user gets, in their words, and name

@@ -289,7 +289,9 @@
   function paintDemoBtn() { $("#demoBtn").innerHTML = demoLabel(); }
 
   const draft = { role: S.role, mi: S.mi, pick: S.pick, startFrom: S.startFrom };
+  let wmOpen = false;
   function openPanel() {
+    wmOpen = false;
     Object.assign(draft, { role: S.role, mi: S.mi, pick: S.pick, startFrom: S.startFrom });
     paintPanel();
     $("#panel").hidden = false;
@@ -324,9 +326,10 @@
         </div>
       </section>
       <section class="pn-sec">
-        <h3 class="pn-h"><span class="pn-num">3</span>Welcoming message <span class="pn-sub">Pick the job to test first</span></h3>
-        <div class="wm-list" role="radiogroup" aria-label="Welcoming message">
+        <h3 class="pn-h"><button class="pn-toggle" data-wm-toggle aria-expanded="${wmOpen}" aria-controls="wmList"><span class="pn-num">3</span>Welcoming message <span class="pn-sub">${wmOpen ? "Pick the job to test first" : `${m.slides.length} options`}</span>${ico("chevron", "pn-chev")}</button></h3>
+        <div class="wm-list${wmOpen ? "" : " is-collapsed"}" id="wmList" role="radiogroup" aria-label="Welcoming message">
           ${m.slides.map((s, i) => {
+            if (!wmOpen && i !== draft.pick) return "";
             const [jt] = C.job(draft.role, draft.mi, i);
             return `<button role="radio" aria-checked="${i === draft.pick}" class="wm-card${i === draft.pick ? " is-on" : ""}" data-wm-pick="${i}">
               <img src="${C.art(draft.role, draft.mi, s.feature)}" alt="">
@@ -365,7 +368,8 @@
     if (t.id === "panelReset") { resetJobs(); stopTour(); S.active = null; ws = freshWs(); save(); closePanel(); S.view = "app"; render(); scrollTo(0, 0); toast("Progress reset"); return; }
     if (t.dataset.rolePick) { draft.role = t.dataset.rolePick; draft.mi = 0; draft.pick = 0; }
     if (t.dataset.motPick) { draft.mi = +t.dataset.motPick; draft.pick = 0; }
-    if (t.dataset.wmPick) draft.pick = +t.dataset.wmPick;
+    if (t.hasAttribute("data-wm-toggle")) wmOpen = !wmOpen;
+    if (t.dataset.wmPick) { if (wmOpen) { draft.pick = +t.dataset.wmPick; wmOpen = false; } else wmOpen = true; }
     if (t.dataset.startPick) draft.startFrom = t.dataset.startPick;
     if (t.dataset.viewGo) {
       const v = t.dataset.viewGo;
@@ -592,7 +596,7 @@
         </ol>
       </section>`;
   }
-  const STARS = [[42, 22, 4, 0], [55, 70, 3, 1.2], [63, 34, 4.5, 2.1], [71, 78, 3, .6], [78, 18, 5, 1.7], [84, 56, 3.5, 2.6], [89, 30, 4, .3], [93, 74, 4.5, 1.4], [97, 14, 3, 2.3], [50, 46, 3, 1.9], [67, 12, 3, .9], [75, 48, 4, 2.9], [59, 88, 3, 1.6], [86, 86, 3.5, .1]]
+  const STARS = [[42, 22, 4, 0], [55, 70, 3, 1.2], [63, 34, 4.5, 2.1], [71, 78, 3, .6], [78, 18, 5, 1.7], [84, 56, 3.5, 2.6], [89, 30, 4, .3], [93, 74, 4.5, 1.4], [97, 14, 3, 2.3], [67, 12, 3, .9], [86, 86, 3.5, .1]]
     .map(([x, y, s, d]) => `<i style="left:${x}%;top:${y}%;--s:${s}px;--d:${d}s"></i>`).join("");
   const listJoin = (a) => (a.length < 2 ? a.join("") : `${a.slice(0, -1).join(", ")}${a.length > 2 ? "," : ""} and ${a[a.length - 1]}`);
   function obItem(s, i, isNext) {
@@ -1457,7 +1461,7 @@
         ${open ? `<div class="ob-detail"><div class="ob-detail-in"><p class="ob-sub">Build it your way in the Editor, then hold it in your hand with AR.</p><div class="ms-pips">${"<i></i>".repeat(7)}<span>7 steps</span></div><div class="ob-actions"><button class="btn btn-primary btn-sm">${ico("play")}Start</button><span class="ob-time">${ico("clock")}About 4 min</span><button class="btn-link">Skip for now</button></div></div></div>` : ""}
       </li></ol>`;
     };
-    const ring = (d, n = 3, cls = "") => `<button class="launcher static ${cls}"><span class="ring" style="--p:${(d / n) * 100}"><span>${d}/${n}</span></span><span class="launch-text"><small>Missions</small><b>Your first steps</b></span></button>`;
+    const ring = (d, n = 3, cls = "") => `<button class="launcher static ${cls}"><span class="ring" style="--p:${(d / n) * 100}"><span>${d}/${n}</span></span><span class="launch-text"><small>Missions</small><b>Explore quick tour</b></span></button>`;
     const pb = (p, label, cls = "") => `<div class="mb-pb"><div class="pb-row"><b>${label}</b><span>${p}%</span></div><div class="pbar ${cls}"><span style="width:${p}%"></span></div></div>`;
     const jb = (ps, label, hl = -1, all = false) => {
       const names = ["Bring your class project to life in 3D", "Make a game your friends will want to play", "Build it together with your classmates"];
@@ -1465,7 +1469,7 @@
         const st = p === 100 ? "done" : p ? "active" : "todo";
         return `<li class="ob-item${i === hl ? " is-hover" : ""}" data-state="${st}" style="--lp:${p}%"><div class="ob-row"><span class="ob-mark" style="--p:${p}">${st === "done" ? ico("check") : `<span>${i + 1}</span>`}</span><span class="ob-text"><small class="ms-eyebrow">Mission ${i + 1}</small><b>${names[i]}</b></span></div></li>`;
       }).join("");
-      return `<div class="ob ms static${all ? " is-all" : ""}"><header class="ob-head"><h2>Your first steps</h2><p class="ob-meta">${label}</p></header><ol class="ob-list">${rows}</ol></div>`;
+      return `<div class="ob ms static${all ? " is-all" : ""}"><header class="ob-head"><h2>Explore quick tour</h2><p class="ob-meta">${label}</p></header><ol class="ob-list">${rows}</ol></div>`;
     };
     const beacon = (cls) => `<div class="mb-beacon"><button class="btn btn-primary btn-sm ${cls === "active" ? "is-pressed" : ""}">${ico("send")}Publish</button><span class="beacon static ${cls ? "is-" + cls : ""}"></span></div>`;
 
