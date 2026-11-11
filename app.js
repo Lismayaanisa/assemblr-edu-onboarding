@@ -346,7 +346,7 @@
     const changed = draft.role !== S.role || draft.mi !== S.mi;
     Object.assign(S, { role: draft.role, mi: draft.mi, pick: draft.pick, startFrom: draft.startFrom, flowRole: draft.role });
     resetJobs();
-    S.tour = false; S.active = null; S.expanded = S.pick;
+    stopTour(); S.active = null; S.expanded = S.pick;
     closePanel();
     if (S.startFrom === "welcome") showWelcome();
     else if (S.startFrom === "home") { S.view = "app"; ws = freshWs(); render(); }
@@ -362,7 +362,7 @@
     if (!t) return;
     if (t.classList.contains("panel-close")) return closePanel();
     if (t.id === "panelApply") return applyPanel();
-    if (t.id === "panelReset") { resetJobs(); S.tour = false; S.active = null; ws = freshWs(); save(); closePanel(); S.view = "app"; render(); toast("Progress reset"); return; }
+    if (t.id === "panelReset") { resetJobs(); stopTour(); S.active = null; ws = freshWs(); save(); closePanel(); S.view = "app"; render(); scrollTo(0, 0); toast("Progress reset"); return; }
     if (t.dataset.rolePick) { draft.role = t.dataset.rolePick; draft.mi = 0; draft.pick = 0; }
     if (t.dataset.motPick) { draft.mi = +t.dataset.motPick; draft.pick = 0; }
     if (t.dataset.wmPick) draft.pick = +t.dataset.wmPick;
@@ -1076,6 +1076,11 @@
     renderWs();
     completeStep();
   }
+  function stopTour() {
+    clearTimeout(T.timer);
+    T.on = false; S.tour = false;
+    hideTour();
+  }
   function exitTour() {
     clearTimeout(T.timer);
     T.on = false; S.tour = false;
@@ -1133,12 +1138,11 @@
       <span class="coach-arrow"></span>
       <div class="coach-top">
         <span class="coach-step">Step ${S.step + 1} of ${flow.length}</span>
-        <span class="coach-badge">${ico(k.icon)}${needsInput ? "Your turn" : kind === "loading" ? "Working on it" : kind === "watch" ? "Look" : "Your turn"}</span>
+        ${kind === "loading" || (kind === "watch" && !needsInput) ? `<span class="coach-badge">${ico(k.icon)}${kind === "loading" ? "Working on it" : "Look"}</span>` : ""}
       </div>
       <h4 class="coach-title" id="coachTitle">${esc(cp.title)}</h4>
       <p class="coach-body">${esc(cp.body)}</p>
       ${kind === "loading" ? `<div class="pbar sys"><span id="coachPct" style="width:${ws.aiPct}%"></span></div>` : ""}
-      ${cp.hint && kind !== "watch" && kind !== "loading" ? `<p class="coach-hint">${ico(k.icon)}<span>${esc(kind === "click" && cp.open ? cp.open : cp.hint)}</span></p>` : ""}
       <p class="coach-err" role="alert" hidden>${ico("alert")}<span></span></p>
       <p class="coach-ok" hidden>${ico("check")}<span>${last ? "Done! You finished this job." : `Done. Next: ${esc(stepCopy(flow[S.step + 1]).title)}`}</span></p>
       <div class="coach-foot">
@@ -1149,6 +1153,7 @@
           : `<button class="btn-link" data-coach="skip">Skip step</button>`}
       </div>`;
     coach.setAttribute("aria-labelledby", "coachTitle");
+    T.framed = null;
     positionSoon();
   }
   function coachState(state, msg) {
@@ -1170,9 +1175,8 @@
     if (state === "success") {
       c.dataset.state = "success";
       $(".coach-err", c).hidden = true;
-      $(".coach-hint", c)?.setAttribute("hidden", "");
       $(".coach-ok", c).hidden = false;
-      $(".coach-badge", c).innerHTML = `${ico("check")}Done`;
+      ($(".coach-badge", c) || $(".coach-top", c).appendChild(Object.assign(document.createElement("span"), { className: "coach-badge" }))).innerHTML = `${ico("check")}Done`;
       $$("[data-coach]", c).forEach((b) => b.setAttribute("hidden", ""));
       $("#beacon").hidden = true;
     }
@@ -1204,11 +1208,53 @@
     const rr = Math.max(...rects.map((r) => r.right)), b = Math.max(...rects.map((r) => r.bottom));
     return { left: l, top: t, right: rr, bottom: b, width: rr - l, height: b - t };
   }
+  /* Space hidden under the tour bar and the sticky nav. */
+  function topInset() {
+    return Math.max(0, ...["#tourBar", "#side"].map((s) => $(s)).filter((el) => el && !el.hidden && el.offsetHeight).map((el) => el.getBoundingClientRect().bottom)) + 12;
+  }
+  function pinned(el) {
+    for (let n = el; n && n !== document.body; n = n.parentElement) if (/fixed|sticky/.test(getComputedStyle(n).position)) return true;
+    return false;
+  }
+  function scroller(el) {
+    for (let n = el.parentElement; n && n !== document.body; n = n.parentElement) {
+      const o = getComputedStyle(n).overflowY;
+      if (/auto|scroll/.test(o) && n.scrollHeight > n.clientHeight + 1) return n;
+    }
+    return document.scrollingElement;
+  }
+  /* Scroll so the target and its coach mark fit on screen together. */
+  function frame() {
+    const sel = val(curDef().anchor) || val(curDef().target);
+    const el = sel && sel.split(",").map((s) => document.querySelector(s.trim())).find((n) => n && n.getBoundingClientRect().width > 0);
+    if (!el || pinned(el)) return true;
+    const r = targetRect(sel), coach = $("#coach");
+    const vw = innerWidth, vh = innerHeight, top = topInset(), bottom = vh - 12, avail = bottom - top;
+    const cw = coach.offsetWidth || 340, ch = coach.offsetHeight || 220, gap = 24;
+    const side = vw >= 640 && (vw - r.right > cw + gap || r.left > cw + gap);
+    const sheet = vw < 640 ? coach.offsetHeight || 0 : 0;
+    const need = side ? r.height + 16 : r.height + gap + ch;
+    let want;
+    if (need + sheet <= avail) {
+      if (r.top >= top + 8 && r.top + need <= bottom - sheet) return true;
+      want = top + Math.max(8, (avail - sheet - need) / 2);
+    } else want = top + 8;
+    const delta = r.top - want;
+    if (Math.abs(delta) < 4) return true;
+    const sc = scroller(el);
+    sc.scrollTo({ top: sc.scrollTop + delta, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    return true;
+  }
   function position() {
     if (!T.on) return;
     const r0 = targetRect();
     const spot = $("#spot"), coach = $("#coach"), beacon = $("#beacon");
     const vw = innerWidth, vh = innerHeight;
+    const key = `${S.active}:${S.step}:${val(curDef().target)}`;
+    if (r0 && T.framed !== key && frame()) {
+      T.framed = key; T.userScrolled = false;
+      setTimeout(() => T.on && T.framed === key && frame(), 450);
+    } else if (r0 && !T.userScrolled && (r0.top < topInset() || r0.bottom > vh - 12)) frame();
     if (!r0) { spot.hidden = true; beacon.hidden = true; setBlockers(null); coach.style.left = vw / 2 - 170 + "px"; coach.style.top = vh / 2 - 100 + "px"; coach.dataset.place = "none"; return; }
     const pad = 8;
     const r = { left: r0.left - pad, top: r0.top - pad, width: r0.width + pad * 2, height: r0.height + pad * 2 };
@@ -1233,7 +1279,7 @@
     else if (pref === "left") { x = r.left - cw - gap; y = r.top + r.height / 2 - ch / 2; }
     else { x = r.right - cw - 24; y = r.top + 24; }
     x = Math.max(12, Math.min(vw - cw - 12, x));
-    y = Math.max(76, Math.min(vh - ch - 12, y));
+    y = Math.max(topInset(), Math.min(vh - ch - 12, y));
     coach.dataset.place = pref;
     coach.style.left = x + "px"; coach.style.top = y + "px";
     const arrow = $(".coach-arrow", coach);
@@ -1261,6 +1307,8 @@
   }
   addEventListener("resize", positionSoon);
   document.addEventListener("scroll", () => T.on && position(), true);
+  ["wheel", "touchmove"].forEach((ev) => addEventListener(ev, () => { T.userScrolled = true; }, { passive: true }));
+  addEventListener("keydown", (e) => { if (/^(Arrow|Page|Home|End| )/.test(e.key)) T.userScrolled = true; });
   setInterval(() => T.on && position(), 600);
 
   /* ---------- Celebration ---------- */
@@ -1273,19 +1321,32 @@
     layer.hidden = false;
     layer.innerHTML = `
       <div class="cele" role="dialog" aria-modal="true" aria-labelledby="celeTitle">
-        <div class="confetti" aria-hidden="true">${Array.from({ length: 18 }, (_, k) => `<i style="--i:${k}"></i>`).join("")}</div>
         <div class="cele-jump" aria-hidden="true"><img class="cele-blr" src="assets/blr/wave.png" alt=""><span class="cele-shadow"></span></div>
-        <p class="eyebrow">Mission ${i + 1} complete · ${doneN} of ${slides().length}</p>
         <p class="ms-gain">${doneN === slides().length ? `${ico("flag")}Congratulations! You've explored Assemblr EDU` : `${ico(FEATURE_ICON[s.feature] || "cube")}You tried ${esc(featureLabel(s.feature))}`}</p>
         <h3 id="celeTitle">${esc(title)}</h3>
         <p class="cele-body">${esc(fn(ctx()))}</p>
-        <div class="pbar"><span style="width:${(doneN / slides().length) * 100}%"></span></div>
+        <div class="cele-prog"><div class="pbar"><span style="width:${(doneN / slides().length) * 100}%"></span></div><p><span>Mission ${i + 1} complete</span><b>${doneN} of ${slides().length}</b></p></div>
         <div class="cele-actions">
           ${next >= 0 ? `<button class="btn btn-primary" data-cele="next" data-i="${next}"><span class="cele-next"><small>Start Mission ${next + 1} · ${esc(featureLabel(slides()[next].feature))}</small><b>${esc(C.job(S.role, S.mi, next)[0])}</b></span>${ico("right")}</button>` : `<button class="btn btn-primary" data-cele="home">${ico("home")}Go to my home</button>`}
           ${next >= 0 ? `<button class="btn btn-ghost" data-cele="home">Back to home</button>` : ""}
         </div>
       </div>`;
+    confetti(layer);
     $("[data-cele]", layer).focus();
+  }
+  function confetti(host) {
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const colors = ["var(--magenta)", "var(--cyan)", "var(--yellow)", "var(--indigo)", "#20a874", "#ff9f2e"];
+    const rnd = (a, b) => a + Math.random() * (b - a);
+    const box = document.createElement("div");
+    box.className = "confetti";
+    box.setAttribute("aria-hidden", "true");
+    box.innerHTML = Array.from({ length: 110 }, (_, k) => {
+      const shape = k % 5 === 0 ? "dot" : k % 3 === 0 ? "strip" : "";
+      return `<i class="${shape}" style="--x:${rnd(-48, 48).toFixed(1)}vw;--y:${rnd(-58, -22).toFixed(1)}vh;--r:${Math.round(rnd(-720, 720))}deg;--c:${colors[k % colors.length]};--d:${Math.round(rnd(0, 180))}ms;--t:${rnd(2.4, 3.6).toFixed(2)}s;--s:${rnd(.7, 1.25).toFixed(2)}"></i>`;
+    }).join("");
+    host.appendChild(box);
+    setTimeout(() => box.remove(), 4200);
   }
   $("#celebrate").addEventListener("click", (e) => {
     const b = e.target.closest("[data-cele]");
@@ -1378,10 +1439,9 @@
     const card = (name, note, html, cls = "") => `<figure class="mb-card ${cls}"><div class="mb-stage">${html}</div><figcaption><b>${name}</b><span>${note}</span></figcaption></figure>`;
     const coachHtml = (o) => `<div class="coach is-static" data-state="${o.state}" data-place="${o.place || "bottom"}">
         <span class="coach-arrow" style="${o.place === "left" || o.place === "right" ? "top:50%" : "left:50%"}"></span>
-        <div class="coach-top"><span class="coach-step">Step ${o.step || 3} of 7</span><span class="coach-badge">${ico(o.badgeIco || "hand")}${o.badge || "Your turn"}</span></div>
+        <div class="coach-top"><span class="coach-step">Step ${o.step || 3} of 7</span>${o.badge ? `<span class="coach-badge">${ico(o.badgeIco)}${o.badge}</span>` : ""}</div>
         <h4 class="coach-title">${o.title}</h4><p class="coach-body">${o.body}</p>
         ${o.extra || ""}
-        ${o.hint ? `<p class="coach-hint">${ico(o.hintIco || "hand")}<span>${o.hint}</span></p>` : ""}
         ${o.err ? `<p class="coach-err">${ico("alert")}<span>${o.err}</span></p>` : ""}
         ${o.ok ? `<p class="coach-ok">${ico("check")}<span>${o.ok}</span></p>` : ""}
         ${o.noFoot ? "" : `<div class="coach-foot"><span class="coach-dots">${Array.from({ length: 7 }, (_, i) => `<i class="${i < (o.step || 3) - 1 ? "d" : i === (o.step || 3) - 1 ? "c" : ""}"></i>`).join("")}</span><button class="btn-link">Back</button>${o.primary ? `<button class="btn btn-primary btn-sm ${o.primaryCls || ""}" ${o.primaryDisabled ? 'aria-disabled="true"' : ""}>${o.primary}${ico("right")}</button>` : `<button class="btn-link">Skip step</button>`}</div>`}
@@ -1492,7 +1552,7 @@
             ${card("blr · explain", "When a step is new or unusual.", `<div class="blr-tip"><img src="assets/blr/think.png" alt=""><p class="bubble">A Custom Marker is a printed image. Scan it, and your 3D appears on top.</p></div>`)}
             ${card("blr · encourage", "After a job is done.", `<div class="blr-tip"><img src="assets/blr/cheer.svg" alt=""><p class="bubble">That's your first project, live. Want to make it a game next?</p></div>`)}
             ${card("Toast", "Quiet confirmation for small actions like copying.", `<div class="toast static is-on">${ico("check")}<span>Link copied</span></div>`)}
-            ${card("Celebration", "After each job. States what the user can do now, then offers the next job.", `<div class="cele static"><div class="cele-jump" aria-hidden="true"><img class="cele-blr" src="assets/blr/wave.png" alt=""><span class="cele-shadow"></span></div><p class="eyebrow">Mission 1 complete · 1 of 3</p><h3>Your project is ready to explore</h3><p class="cele-body">You built a 3D scene, published it, and viewed it in 3D and AR. Your teacher can open it the same way.</p><div class="pbar"><span style="width:33%"></span></div><div class="cele-actions"><button class="btn btn-primary"><span class="cele-next"><small>Start Mission 2 · Visual Coding</small><b>Make a game your friends will want to play</b></span>${ico("right")}</button></div></div>`)}
+            ${card("Celebration", "After each job. States what the user can do now, then offers the next job.", `<div class="cele static"><div class="cele-jump" aria-hidden="true"><img class="cele-blr" src="assets/blr/wave.png" alt=""><span class="cele-shadow"></span></div><h3>Your project is ready to explore</h3><p class="cele-body">You built a 3D scene, published it, and viewed it in 3D and AR. Your teacher can open it the same way.</p><div class="cele-prog"><div class="pbar"><span style="width:33%"></span></div><p><span>Mission 1 complete</span><b>1 of 3</b></p></div><div class="cele-actions"><button class="btn btn-primary"><span class="cele-next"><small>Start Mission 2 · Visual Coding</small><b>Make a game your friends will want to play</b></span>${ico("right")}</button></div></div>`)}
             ${card("All done", "Checklist after the last job: green bar, header reads All done.", jb([100, 100, 100], "All done", -1, true))}
           </div>
         </section>
